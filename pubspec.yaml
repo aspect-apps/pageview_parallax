@@ -1,9 +1,9 @@
 name: pageview_parallax
-description: A simple library for easily creating a parallax effect.
-version: 1.0.0-alpha.1
+description: A simple library for easily creating a parallax effect. Works with web and mobile.
+version: 1.0.0-alpha.2
 homepage: https://www.aspectapps.com
-repository: https://github.com/amogh-jrules/pageview_parallax
-issue_tracker: https://github.com/amogh-jrules/flutter-pagination/issues
+repository: https://github.com/aspect-apps/pageview_parallax
+issue_tracker: https://github.com/aspect-apps/pageview_parallax/issues
 
 environment:
   sdk: '>=2.8.1 <3.0.0'
