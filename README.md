@@ -1,12 +1,16 @@
 This plugin for Flutter makes it easier for you to create a list with a parallax effect, providing several animations types and customizations options.
 
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/7014073/97959302-d3722700-1d8d-11eb-9185-424ed31feffd.gif)
+
+Please be advised: this package is currently under development and is not stable.
+
 # Getting Started
 
 Add this to your package's pubspec.yaml file:
 
 ```
 dependencies:
-  pageview_parallax: 1.0.0
+  pageview_parallax: 1.0.0-alpha.2
 ```
 
 # Usage

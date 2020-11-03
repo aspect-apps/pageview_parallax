@@ -15,6 +15,11 @@ class FlutterParallax extends StatefulWidget {
     this.backgroundImage,
   }) : super(key: key);
 
+  static FlutterParallax of(BuildContext context) {
+    //This method returns the current state of the ThemeSwitcherWidget. This will be used down the tree
+    return context.findAncestorWidgetOfExactType();
+  }
+
   @override
   _FlutterParallaxState createState() => _FlutterParallaxState();
 }
@@ -54,15 +59,21 @@ class _FlutterParallaxState extends State<FlutterParallax> {
           double pageOffset,
           Widget child,
         ) {
-          return Container(
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: widget.backgroundImage,
-                alignment: Alignment(0, pageOffset.abs() / 3),
-                fit: BoxFit.cover,
+          return Stack(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: widget.backgroundImage,
+                    alignment:
+                        Alignment(0, pageOffset.abs() / widget.screens.length),
+                    fit: BoxFit.none,
+                    scale: 1,
+                  ),
+                ),
               ),
-            ),
-            child: pageViewWidget,
+              pageViewWidget,
+            ],
           );
         },
       );
@@ -87,6 +98,8 @@ class FlutterParallaxChild extends StatefulWidget {
 class _FlutterParallaxChildState extends State<FlutterParallaxChild> {
   @override
   Widget build(BuildContext context) {
+    final numberOfPages = FlutterParallax.of(context).screens.length;
+
     return ValueListenableBuilder<double>(
       valueListenable: offset,
       builder: (
@@ -96,7 +109,7 @@ class _FlutterParallaxChildState extends State<FlutterParallaxChild> {
       ) {
         return Container(
           alignment: Alignment(
-            -3 + 3 * pageOffset.abs() - .75,
+            -(numberOfPages) + numberOfPages * pageOffset.abs() - .75,
             -2.25 + 1.5 * pageOffset.abs(),
           ),
           child: widget.child,

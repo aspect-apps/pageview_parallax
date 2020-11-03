@@ -1,8 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:jramogh/config/assets.dart';
-import 'package:jramogh/config/constants.dart';
 import 'package:flutter/material.dart';
-import 'dart:html' as html;
+// import 'dart:html' as html;
 
 class AboutTab extends StatelessWidget {
   // How far is page from being displayed
@@ -12,7 +11,7 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final list = <String>['Flutter🎯', 'Machine Learning🖥', 'Music🎼'];
+    final list = <String>['Flutter🎯', 'Parallax'];
 
     return Center(
       child: Padding(
@@ -23,7 +22,7 @@ class AboutTab extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 20),
             Text(
-              'Hello! I am Amogh.',
+              'Hello!',
               textScaleFactor: 5.5,
               textAlign: TextAlign.center,
             ),
@@ -65,24 +64,24 @@ class AboutTab extends StatelessWidget {
                 IconButton(
                   icon: SizedBox(
                       width: 90, height: 90, child: Image.asset(Assets.kaggle)),
-                  onPressed: () =>
-                      html.window.open(Constants.PROFILE_KAGGLE, 'adityadroid'),
+                  // onPressed: () =>
+                      // html.window.open(Constants.PROFILE_KAGGLE, 'adityadroid'),
                 ),
                 IconButton(
                   icon: SizedBox(
                       width: 120,
                       height: 120,
                       child: Image.asset(Assets.linkedin)),
-                  onPressed: () => html.window
-                      .open(Constants.PROFILE_LINKEDIN, 'adityadroid'),
+                  // onPressed: () => html.window
+                      // .open(Constants.PROFILE_LINKEDIN, 'adityadroid'),
                 ),
                 IconButton(
                   icon: SizedBox(
                       width: 120,
                       height: 120,
                       child: Image.asset(Assets.github)),
-                  onPressed: () => html.window
-                      .open(Constants.PROFILE_GITHUB, 'amogh-jrules'),
+                  // onPressed: () => html.window
+                  //     .open(Constants.PROFILE_GITHUB, 'amogh-jrules'),
                 ),
               ],
             )
