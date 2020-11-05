@@ -1,6 +1,6 @@
 This plugin for Flutter makes it easier for you to create a list with a parallax effect, providing several animations types and customizations options.
 
-![ezgif com-gif-maker](https://user-images.githubusercontent.com/7014073/97959302-d3722700-1d8d-11eb-9185-424ed31feffd.gif)
+![](android.gif)
 
 Please be advised: this package is currently under development and is not stable.
 
