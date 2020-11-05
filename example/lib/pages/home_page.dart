@@ -14,9 +14,9 @@ class _HomePageState extends State<HomePage> {
     AboutTab(),
     Introduction(),
     ProjectsTab(),
-    ProjectsTab(),
-    ProjectsTab(),
-    ProjectsTab(),
+    // ProjectsTab(),
+    // ProjectsTab(),
+    // ProjectsTab(),
   ];
 
   @override

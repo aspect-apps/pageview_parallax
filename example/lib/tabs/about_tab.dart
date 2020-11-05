@@ -11,7 +11,7 @@ class AboutTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final list = <String>['Flutter🎯', 'Parallax'];
+    final list = <String>['Flutter Parallax', 'Flutter Parallax'];
 
     return Center(
       child: Padding(
@@ -22,8 +22,8 @@ class AboutTab extends StatelessWidget {
           children: <Widget>[
             SizedBox(height: 20),
             Text(
-              'Hello!',
-              textScaleFactor: 5.5,
+              'Hello! Welcome to',
+              textScaleFactor: 3,
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
@@ -57,34 +57,6 @@ class AboutTab extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                IconButton(
-                  icon: SizedBox(
-                      width: 90, height: 90, child: Image.asset(Assets.kaggle)),
-                  // onPressed: () =>
-                      // html.window.open(Constants.PROFILE_KAGGLE, 'adityadroid'),
-                ),
-                IconButton(
-                  icon: SizedBox(
-                      width: 120,
-                      height: 120,
-                      child: Image.asset(Assets.linkedin)),
-                  // onPressed: () => html.window
-                      // .open(Constants.PROFILE_LINKEDIN, 'adityadroid'),
-                ),
-                IconButton(
-                  icon: SizedBox(
-                      width: 120,
-                      height: 120,
-                      child: Image.asset(Assets.github)),
-                  // onPressed: () => html.window
-                  //     .open(Constants.PROFILE_GITHUB, 'amogh-jrules'),
-                ),
-              ],
-            )
           ],
         ),
       ),

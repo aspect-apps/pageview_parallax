@@ -11,7 +11,7 @@ class FlutterParallax extends StatefulWidget {
   const FlutterParallax({
     Key key,
     @required this.screens,
-    this.scrollDirection = Axis.vertical,
+    this.scrollDirection = Axis.horizontal,
     this.backgroundImage,
   }) : super(key: key);
 
@@ -66,8 +66,8 @@ class _FlutterParallaxState extends State<FlutterParallax> {
                   image: DecorationImage(
                     image: widget.backgroundImage,
                     alignment:
-                        Alignment(0, pageOffset.abs() / widget.screens.length),
-                    fit: BoxFit.none,
+                        Alignment(pageOffset.abs() / widget.screens.length,0),
+                    fit: BoxFit.fitHeight,
                     scale: 1,
                   ),
                 ),
@@ -99,7 +99,6 @@ class _FlutterParallaxChildState extends State<FlutterParallaxChild> {
   @override
   Widget build(BuildContext context) {
     final numberOfPages = FlutterParallax.of(context).screens.length;
-
     return ValueListenableBuilder<double>(
       valueListenable: offset,
       builder: (
@@ -109,8 +108,9 @@ class _FlutterParallaxChildState extends State<FlutterParallaxChild> {
       ) {
         return Container(
           alignment: Alignment(
-            -(numberOfPages) + numberOfPages * pageOffset.abs() - .75,
             -2.25 + 1.5 * pageOffset.abs(),
+            -(numberOfPages) + numberOfPages * pageOffset.abs() - .75,
+            
           ),
           child: widget.child,
         );
