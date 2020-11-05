@@ -1,4 +1,4 @@
-This plugin for Flutter makes it easier for you to create a list with a parallax effect, providing several animations types and customizations options.
+This plugin for Flutter makes it easier for you to create a PageView with a parallax effect, providing several animations types and customizations options.
 
 ![](android.gif)
 
